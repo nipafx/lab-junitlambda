@@ -7,6 +7,10 @@ _Toying around with the JUnit Lambda Prototype_
 On November 18th _[JUnit Lambda](http://junit.org/junit-lambda.html)_ presented their first [prototype](https://github.com/junit-team/junit-lambda/wiki/Prototype).
 I'm using this project to get to know the features and to demonstrate them.
 
+:mega:
+**For the demonstration have a look at [the test classes](https://github.com/CodeFX-org/lab-junitlambda/tree/master/src/test/java/org/codefx/lab/junitlambda).**
+:mega:
+
 ## Version
 
 Because the prototype is still changing a lot, this project depends on a specific build at any point in time.
