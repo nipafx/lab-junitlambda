@@ -7,6 +7,13 @@ _Toying around with the JUnit Lambda Prototype_
 On November 18th _[JUnit Lambda](http://junit.org/junit-lambda.html)_ presented their first [prototype](https://github.com/junit-team/junit-lambda/wiki/Prototype).
 I'm using this project to get to know the features and to demonstrate them.
 
+## Version
+
+Because the prototype is still changing a lot, this project depends on a specific build at any point in time.
+This build number is hardocded into the `pom.xml`.
+
+**Current Version**: :seven::five:
+
 ## Compiling & Running
 
 The prototype is only available in [Sonatype's snapshots repository](https://oss.sonatype.org/content/repositories/snapshots/org/junit/prototype/) and by default Maven will not access it.
@@ -36,7 +43,8 @@ Adding the following [profile](http://maven.apache.org/guides/introduction/intro
 This project should then compile with `mvn -P snapshots compile`.
 
 The prototype [must be executed](https://github.com/junit-team/junit-lambda/wiki/Prototype-Running-Tests) with a bare-bones console runner and it is straight-forward to have Maven do that.
-This way the surefire plugin is not used but that's no problem. The runner will print a lot of colorful messages to the console.
+This way the surefire plugin is not used but that's no problem.
+The runner will print a lot of colorful messages to the console.
 
 The tests can simply be run with `mvn test`.
 
