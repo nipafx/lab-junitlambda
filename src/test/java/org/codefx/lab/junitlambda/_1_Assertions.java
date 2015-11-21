@@ -5,6 +5,7 @@ import org.junit.gen5.api.Test;
 import java.io.IOException;
 import java.util.function.BooleanSupplier;
 
+import static org.codefx.lab.junitlambda.Console.print;
 import static org.junit.gen5.api.Assertions.assertAll;
 import static org.junit.gen5.api.Assertions.assertEquals;
 import static org.junit.gen5.api.Assertions.assertFalse;
@@ -17,6 +18,8 @@ import static org.junit.gen5.api.Assertions.assertTrue;
 import static org.junit.gen5.api.Assertions.expectThrows;
 
 public class _1_Assertions {
+
+	private static final boolean CATCH_GROUP_ASSERTION_FAILURE_MESSAGE = true;
 
 	@Test
 	public void boringAssertions() {
@@ -61,11 +64,18 @@ public class _1_Assertions {
 
 	@Test
 	public void groupedAssertions() {
-		assertAll("Multiplication",
-				() -> assertEquals(15, 3 * 5, "3 x 5 = 15"),
-				// this fails on purpose to see what the message looks like
-				() -> assertEquals(15, 5 + 3, "5 x 3 = 15")
-		);
+		try {
+			assertAll("Multiplication",
+					() -> assertEquals(15, 3 * 5, "3 x 5 = 15"),
+					// this fails on purpose to see what the message looks like
+					() -> assertEquals(15, 5 + 3, "5 x 3 = 15")
+			);
+		} catch (AssertionError e) {
+			if (CATCH_GROUP_ASSERTION_FAILURE_MESSAGE)
+				print("Assertion failed - message starts in next line:\n" + e.getMessage());
+			else
+				throw e;
+		}
 	}
 
 }
