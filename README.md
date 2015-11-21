@@ -16,7 +16,7 @@ I'm using this project to get to know the features and to demonstrate them.
 Because the prototype is still changing a lot, this project depends on a specific build at any point in time.
 This build number is hardocded in the `pom.xml`.
 
-**Current Version**: :seven::five:
+**Current Version**: :nine::five:
 
 ## Compiling & Running
 

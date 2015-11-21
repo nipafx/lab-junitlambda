@@ -9,7 +9,7 @@
 	<groupId>org.codefx.lab</groupId>
 	<artifactId>junit-lambda</artifactId>
 	<!-- the version matches the prototype's build number-->
-	<version>75</version>
+	<version>95</version>
 
 	<!-- PROJECT META INFORMATION -->
 
@@ -64,19 +64,19 @@
 		<dependency>
 			<groupId>org.junit.prototype</groupId>
 			<artifactId>junit5-api</artifactId>
-			<version>5.0.0-20151119.213341-75</version>
+			<version>5.0.0-20151121.015920-95</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.junit.prototype</groupId>
 			<artifactId>junit-console</artifactId>
-			<version>5.0.0-20151119.213336-75</version>
+			<version>5.0.0-20151121.015915-95</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.junit.prototype</groupId>
 			<artifactId>junit5-engine</artifactId>
-			<version>5.0.0-20151119.213342-75</version>
+			<version>5.0.0-20151121.015920-95</version>
 			<scope>test</scope>
 		</dependency>
 
