@@ -6,6 +6,7 @@ import org.junit.gen5.api.Test;
 import org.junit.gen5.api.TestInstance;
 import org.junit.gen5.api.TestInstance.Lifecycle;
 
+import static org.codefx.lab.junitlambda.Console.print;
 import static org.junit.gen5.api.Assertions.assertEquals;
 
 /**
@@ -14,34 +15,19 @@ import static org.junit.gen5.api.Assertions.assertEquals;
 @TestInstance(Lifecycle.PER_CLASS)
 class _4_InnerClasses {
 
-	// we use the PER_CLASS lifecycle to assert that all tests are executed
-
-	private static final int EXPECTED_TEST_METHOD_COUNT = 2;
-	private int executedTestMethodCount = 0;
-
-	@AfterAll
-	void assertAllMethodsExecuted() {
-		assertEquals(EXPECTED_TEST_METHOD_COUNT, executedTestMethodCount);
+	@Test
+	void nothing() {
+		// this empty test is (currently?) required so that 'InnerClass' gets picked up end its tests executed
 	}
 
 	// TESTS
 
 	@Nested
-	class SomeInnerClass {
+	class InnerClass {
 
 		@Test
 		void someTestMethod() {
-			executedTestMethodCount++;
-		}
-
-	}
-
-	@Nested
-	class OtherInnerClass {
-
-		@Test
-		void someTestMethod() {
-			executedTestMethodCount++;
+			print("Greetings from a nested test class.");
 		}
 
 	}
@@ -50,13 +36,30 @@ class _4_InnerClasses {
 	static class StaticClass {
 
 		@Test
-		public void doesNotRunTestMethodsInStaticInnerClasses() {
-			// the documentation says "Notice that only non-static inner classes can serve as contexts."
-			// but this runs anyway... strange
-			throw new AssertionError("This method should not be run!");
+		void someTestMethod() {
+			// the documentation says "Notice that only non-static inner classes can serve as contexts.";
+			// this runs anyway but it is no nested test class
+			print("Greetings from an inner test class.");
 		}
 
 	}
 
+	class UnannotatedInnerClass {
+
+		@Test
+		void someTestMethod() {
+			throw new AssertionError("This method does not run.");
+		}
+
+	}
+
+	static class UnannotatedStaticClass {
+
+		@Test
+		void someTestMethod() {
+			print("Greetings from an inner test class that is not even annotated.");
+		}
+
+	}
 
 }
