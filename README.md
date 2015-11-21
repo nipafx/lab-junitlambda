@@ -14,7 +14,7 @@ I'm using this project to get to know the features and to demonstrate them.
 ## Version
 
 Because the prototype is still changing a lot, this project depends on a specific build at any point in time.
-This build number is hardocded into the `pom.xml`.
+This build number is hardocded in the `pom.xml`.
 
 **Current Version**: :seven::five:
 
@@ -50,7 +50,7 @@ The prototype [must be executed](https://github.com/junit-team/junit-lambda/wiki
 This way the surefire plugin is not used but that's no problem.
 The runner will print a lot of colorful messages to the console.
 
-The tests can simply be run with `mvn test`.
+The tests can simply be run with `mvn -P snapshots test`.
 
 ## Further Reading
 
