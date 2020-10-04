@@ -1,10 +1,9 @@
+:exclamation::exclamation::exclamation:
+With the release of _[JUnit 5](https://junit.org/junit5/)_, the _[JUnit Lambda](http://junit.org/junit-lambda.html)_ became obsolete and so did this repo - see my [JUnit 5 demo project](https://github.com/nipafx/demo-junit-5) instead.
+
 # Lab: JUnit-Lambda
 
-_Toying around with the JUnit Lambda Prototype_
-
----
-
-On November 18th _[JUnit Lambda](http://junit.org/junit-lambda.html)_ presented their first [prototype](https://github.com/junit-team/junit-lambda/wiki/Prototype).
+On November 18th 2015, the _[JUnit Lambda](http://junit.org/junit-lambda.html)_ ptoject presented their first prototype.
 I'm using this project to get to know the features and to demonstrate them.
 
 :mega:
